@@ -1,0 +1,37 @@
+/* === Bootstrap css 5.3v modal=== */
+.modal {
+  .modal-dialog {
+    width: 60%;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 0;
+    background: transparent;
+    @media (width < 768px) {
+      width: 90%;
+    }
+
+    .modal-body {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+.blue-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--primary-blue);
+  margin-right: 5px;
+}
+
+.hr-line {
+  display: inline-block;
+  width: 15px;
+  height: 3px;
+  background-color: white;
+  border-radius: 1px;
+  margin-right: 5px;
+}

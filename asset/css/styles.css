@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  /* Variables For Storing Colors */
+  --primary-clr: #ff7550;
+  --bg-primary: #1f1d2a;
+  --bg-secondary: #252935;
+  --bg-ternary: #35333f;
+  --heading-clr: #efefef;
+  --text-clr: #808191;
+  --gradient: linear-gradient(to right, #35333f, transparent);
+}
+body.active {
+  --primary-clr: #ff7550;
+  --bg-primary: #fff;
+  --bg-secondary: #f3f7fa;
+  --bg-ternary: #e7eaf0;
+  --heading-clr: #16192c;
+  --text-clr: #596780;
+  --gradient: linear-gradient(to right, #e1e5e8, transparent);
+}
+
+/* .primary-bg {
+  background: var(--bg-primary);
+}
+
+.secondary-bg {
+  background: var(--bg-secondary);
+}
+
+.text-clr {
+  color: var(--text-clr);
+}
+
+.primary-clr {
+  color: var(--primary-clr);
+} */
+
+body {
+  background: var(--gradient);
+  @media (width >= 1500px) {
+    padding: 1rem;
+  }
+}
+
+.page_wraper {
+  max-width: 1500px;
+  margin: auto;
+  background: var(--bg-primary);
+  border-radius: 6px;
+  overflow: hidden;
+
+  /* ==== Nav Container ==== */
+  .nav_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--text-clr);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-height: 8vh;
+    min-height: 70px;
+    i {
+      cursor: pointer;
+    }
+
+    .nav_boxes {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .logo_box {
+      .Logo_img {
+        max-height: 50px;
+      }
+      .hamburger_icon {
+        font-size: 20px;
+      }
+    }
+
+    .search_box {
+      padding: 0 15px;
+      border-radius: 8px;
+      background-color: var(--bg-ternary);
+
+      .search_inp {
+        background-color: transparent;
+        color: var(--text-clr);
+        border: none;
+        outline: none;
+        padding: 8px 12px;
+      }
+    }
+  }
+
+  /* ==== Nav Container ==== */
+  .contant {
+    display: flex;
+    color: var(--text-clr);
+    min-height: 92vh;
+    max-height: 92vh;
+    position: relative;
+
+    @media (width >= 1500px) {
+      min-height: 88vh;
+      max-height: 88vh;
+    }
+
+    .side_bar {
+      width: 40%;
+      max-width: 350px;
+      min-height: 100%;
+      border-right: 1px solid var(--bg-ternary);
+      border: 1px solid var(--bg-ternary);
+      overflow-y: scroll;
+      scrollbar-color: var(--text-clr) var(--bg-ternary);
+      scrollbar-width: none;
+
+      @media (width < 992px) {
+        position: absolute;
+        left: -100%;
+      }
+
+      .logo_box {
+        padding: 1rem;
+        margin-bottom: 20px;
+        .Logo_img {
+          max-height: 50px;
+        }
+      }
+
+      .search_box {
+        padding: 0 15px;
+        align-items: center;
+        background-color: var(--bg-ternary);
+        margin-bottom: 20px;
+
+        .search_inp {
+          width: 90%;
+          background-color: transparent;
+          color: var(--text-clr);
+          border: none;
+          outline: none;
+          padding: 8px 12px;
+        }
+      }
+
+      .menu_btns_box {
+        .menu_btns {
+          all: unset;
+          width: 100%;
+          color: var(--text-clr);
+          padding: 10px 15px;
+          /* text-align: center; */
+          padding-left: 30px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            background-color: var(--bg-ternary);
+          }
+          i {
+            margin-right: 10px;
+          }
+        }
+        .active {
+          border-left: 2px solid var(--primary-clr);
+        }
+      }
+
+      .settings_box {
+        margin-top: 50px;
+        i{
+            cursor: pointer;
+        }
+      }
+    }
+    .main_contant {
+      padding: 1.5rem;
+      width: 100%;
+      min-height: 100%;
+      border: 1px solid var(--bg-ternary);
+      overflow-y: scroll;
+      scrollbar-color: var(--text-clr) var(--bg-ternary);
+      scrollbar-width: none;
+    }
+  }
+}

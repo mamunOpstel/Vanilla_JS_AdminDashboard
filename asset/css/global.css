@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* ==== Overwriting Default Styles ==== */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+p,
+a,
+li {
+  font-size: 16px;
+  color: var(--primary-gray);
+  @media (width < 992px) {
+    font-size: 14px;
+  }
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+/* ==== Containers ==== */
+.wraper {
+  width: 100%;
+}
+.max-container {
+  max-width: 1200px;
+  margin: auto;
+  @media (width < 768px) and (width > 570px) {
+    max-width: 90%;
+  }
+}
+.max-w-100 {
+  max-width: 100%;
+}
+
+.section-margin {
+  margin: 3rem 0;
+}
+
+
+/* ==== Paddings ==== */
+.p-100 {
+  padding: 100px 0;
+  @media (width < 992px) {
+    padding: 60px 0;
+  }
+}
+.pt-100 {
+  padding-top: 100px;
+  @media (width < 992px) {
+    padding-top: 60px;
+  }
+}
+.pb-100 {
+  padding-bottom: 100px;
+  @media (width < 992px) {
+    padding-bottom: 60px;
+  }
+}
+
+.p-80 {
+  padding: 80px 0;
+}
+.pt-80 {
+  padding-top: 80px;
+}
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+.p-60 {
+  padding: 60px 0;
+}
+.pt-60 {
+  padding-top: 60px;
+}
+.pb-60 {
+  padding-bottom: 60px;
+}
+.p-40 {
+  padding: 40px 0;
+}
+.pt-40 {
+  padding-top: 40px;
+}
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+/* ==== Flex Styles ==== */
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-align-start {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-row-start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.flex-row-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 12px;
+}
+.flex-row-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.flex-v-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.g-2rem {
+  gap: 2rem;
+}
+
+/* ==== TEXT ==== */
+.big-heading {
+  font-size: 4rem;
+  font-weight: 700;
+  @media (width < 992px) {
+    font-size: 2rem;
+  }
+}
+.medium-big-heading {
+  font-size: 3rem;
+  font-weight: 600;
+  @media (width < 992px) {
+    font-size: 1.5rem;
+  }
+}
+.medium-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  @media (width < 992px) {
+    font-size: 1rem;
+  }
+}
+.small-heading {
+  font-size: 1.7rem;
+  font-weight: 600;
+  @media (width < 992px) {
+    font-size: 0.9rem;
+  }
+}
+
+.text-grdiant-blue {
+  background: linear-gradient(94.76deg, #118cd1 0%, #0b527a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-justify {
+  text-align: justify;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ==== Buttons ==== */
+.primary-btn {
+  all: unset;
+  background: linear-gradient(94.07deg, #0699ec 0%, #126898 100%);
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s linear;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  &:hover {
+    background: linear-gradient(180deg, #0699ec 0%, #126898 100%);
+  }
+}
+.btn-p {
+  padding: 10px 15px;
+}
+
+/* ==== Extra Utility Classes ==== */
+.minus-index {
+  z-index: -1 !important;
+}
