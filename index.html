@@ -39,7 +39,7 @@
             <i class="fa-solid fa-search"></i>
           </div>
 
-          <div class="nav_boxes settings_box">
+          <div class="nav_boxes navbar_icon_box">
             <i class="fa-solid fa-bars d-lg-none hamburger_icon"></i>
             <i class="fa-solid fa-sun d-none d-lg-block light_mode_btn"></i>
             <i class="fa-solid fa-moon d-none d-lg-block dark_mode_btn"></i>
@@ -52,44 +52,53 @@
         <div class="contant">
           <!-- ==== Sidebar ==== -->
           <div class="side_bar">
-            <div class="search_box d-lg-none">
-              <input type="text" placeholder="Search..." class="search_inp" />
-              <i class="fa-solid fa-search"></i>
+            <div class="box_1">
+              <div class="search_box d-lg-none">
+                <input type="text" placeholder="Search..." class="search_inp" />
+                <i class="fa-solid fa-search"></i>
+              </div>
+
+              <div class="menu_btns_box">
+                <button class="menu_btns active">
+                  <i class="fa-solid fa-desktop"></i> Admin
+                </button>
+                <button class="menu_btns">
+                  <i class="fa-solid fa-table"></i>Dasboard
+                </button>
+                <button class="menu_btns">
+                  <i class="fa-solid fa-chart-simple"></i> Chart
+                </button>
+                <button class="menu_btns">
+                  <i class="fa-solid fa-user"></i> Users
+                </button>
+                <button class="menu_btns">
+                  <i class="fa-brands fa-uikit"></i> UI kit
+                </button>
+              </div>
             </div>
 
-            <div class="menu_btns_box">
-              <button class="menu_btns active">
-                <i class="fa-solid fa-desktop"></i> Admin
-              </button>
-              <button class="menu_btns">
-                <i class="fa-solid fa-table"></i>Dasboard
-              </button>
-              <button class="menu_btns">
-                <i class="fa-solid fa-chart-simple"></i> Chart
-              </button>
-              <button class="menu_btns">
-                <i class="fa-solid fa-user"></i> Users
-              </button>
-              <button class="menu_btns">
-                <i class="fa-brands fa-uikit"></i> UI kit
-              </button>
-            </div>
-
-            <div class="nav_boxes settings_box d-flex justify-content-around">
-              <i class="fa-solid fa-bars d-lg-none hamburger_icon"></i>
-              <i class="fa-solid fa-sun d-none d-lg-block light_mode_btn"></i>
-              <i class="fa-solid fa-moon d-none d-lg-block dark_mode_btn"></i>
-              <i class="fa-solid fa-user d-none d-lg-block"></i>
+            <div
+              class="box_2 nav_boxes sidebar_icon_box d-flex d-lg-none justify-content-around"
+            >
+              <i class="fa-solid fa-sun sidebar_light_mode_btn"></i>
+              <i class="fa-solid fa-moon sidebar_dark_mode_btn"></i>
+              <i class="fa-solid fa-user"></i>
             </div>
           </div>
           <!-- ==== Main Contant  ==== -->
-          <div class="main_contant"></div>
+          <div class="main_contant">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit id nisi reiciendis quisquam quaerat impedit saepe, veniam ea sequi, earum maxime facilis. Consequatur voluptatem, debitis sed unde corporis maiores numquam in illo enim eveniet velit ullam voluptatibus, a suscipit et, accusamus hic iure aut voluptates laborum consectetur iste soluta libero! Eaque consequuntur debitis, nulla nemo incidunt corporis hic est voluptas ratione fuga sint in enim vero voluptate. Ducimus repellendus deleniti voluptatem beatae fuga delectus ipsa ea ut earum eaque recusandae itaque numquam exercitationem illo quaerat consequuntur, quas adipisci voluptatum quis neque similique enim! Possimus sapiente dolorum, sed quos maiores quibusdam earum esse nesciunt ipsa numquam inventore soluta incidunt architecto quo doloremque, beatae in? Veniam illum reiciendis ipsa, aspernatur commodi maxime. Laboriosam explicabo veniam assumenda temporibus! Ad et odio illum magnam vel itaque, porro asperiores pariatur laboriosam saepe magni nostrum sit veritatis quos. Unde, eligendi? Dicta architecto praesentium repellat, dolorum rem omnis dolores iste culpa illo ea commodi ipsum autem fugiat nobis, perspiciatis ratione a reprehenderit id facilis iure dolor, recusandae aliquam molestias! In, iste facilis itaque, ea sed neque laboriosam ipsam porro alias dolor quaerat rerum ducimus iure sit eaque dignissimos! Nesciunt rerum omnis aliquam doloribus cum sint, repudiandae harum cumque esse cupiditate delectus excepturi dolore corporis. Rem temporibus impedit excepturi illo nam voluptatum, qui fuga explicabo ipsa sapiente numquam quo deserunt pariatur tenetur voluptas dolore voluptatem, dolorum quos, perferendis voluptatibus. Consequatur sed iusto officia modi consectetur molestias voluptas ex eius quo. Obcaecati accusantium illo officiis cupiditate quis temporibus aut veniam repellat, eum totam repellendus deleniti illum id eos eveniet nisi reprehenderit error, tempora, placeat perferendis dolor delectus! Eligendi dolores fugiat libero sint provident praesentium veritatis aperiam autem minus, quidem ab facilis magni illum sunt deserunt dolorum. Corporis recusandae laborum, repudiandae cupiditate quisquam numquam natus molestiae culpa similique hic debitis.
+            </p>
+          </div>
         </div>
       </main>
     </div>
 
     <!-- ==== Scripts ==== -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="asset/js/main.js"></script>
+    <script src="asset/js/functions/Change_Theme.js"></script>
+    <script src="asset/js/functions/Toggle_SideMenu.js"></script>
+    <script src="asset/js/functions/Change_Active_TabButton.js"></script>
   </body>
 </html>
