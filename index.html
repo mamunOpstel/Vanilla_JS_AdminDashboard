@@ -15,8 +15,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- <link rel="stylesheet" href="asset/css/global.css" />
-    <link rel="stylesheet" href="asset/css/global-components.css" /> -->
     <link rel="stylesheet" href="asset/css/styles.css" />
   </head>
   <body>
@@ -33,17 +31,61 @@
                 class="Logo_img"
               />
             </a>
+            <i
+              class="fa-solid fa-bars d-none d-lg-block hamburger_icon hamburger_icon_view"
+            ></i>
           </div>
           <div class="nav_boxes search_box d-none d-lg-flex">
             <input type="text" placeholder="Search..." class="search_inp" />
             <i class="fa-solid fa-search"></i>
           </div>
 
-          <div class="nav_boxes navbar_icon_box">
+          <div class="nav_boxes navbar_user_box">
+            <img
+              src="asset/images/user_image.jpg"
+              alt="User_image"
+              width="40"
+              height="40"
+              class="rounded-circle user_image"
+            />
+            <div class="dropdown d-none d-sm-block">
+              <p
+                class="dropdown-toggle m-0"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                User_name
+              </p>
+              <div class="dropdown-menu dropdown-menu-dark">
+                <ul class="user_options_box">
+                  <li>
+                    <button class="dropdown-item light_mode_btn">
+                      <i class="fa-solid fa-sun mx-2"></i> light
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item dark_mode_btn">
+                      <i class="fa-solid fa-moon mx-2"></i>dark
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item">
+                      <i class="fa-solid fa-gear mx-2 gear_icon"></i> Settings
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item">
+                      <i
+                        class="fa-solid fa-right-from-bracket mx-2 logout_icon text-danger"
+                      ></i>
+                      Logout
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
             <i class="fa-solid fa-bars d-lg-none hamburger_icon"></i>
-            <i class="fa-solid fa-sun d-none d-lg-block light_mode_btn"></i>
-            <i class="fa-solid fa-moon d-none d-lg-block dark_mode_btn"></i>
-            <i class="fa-solid fa-user d-none d-lg-block"></i>
           </div>
         </nav>
       </header>
@@ -52,7 +94,58 @@
         <div class="contant">
           <!-- ==== Sidebar ==== -->
           <div class="side_bar">
-            <div class="box_1">
+            <div class="box_1 normal_view_box">
+              <div
+                class="nav_boxes navbar_user_box d-flex align-items-center gap-3 px-3 my-3"
+              >
+                <img
+                  src="asset/images/user_image.jpg"
+                  alt="User_image"
+                  width="40"
+                  height="40"
+                  class="rounded-circle user_image"
+                />
+                <div class="dropdown">
+                  <p
+                    class="dropdown-toggle m-0"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    User_name
+                  </p>
+                  <div class="dropdown-menu dropdown-menu-dark">
+                    <ul class="user_options_box sidebar_user_options_box">
+                      <li>
+                        <button class="dropdown-item light_mode_btn">
+                          <i class="fa-solid fa-sun mx-2"></i> light
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item dark_mode_btn">
+                          <i class="fa-solid fa-moon mx-2"></i>dark
+                        </button>
+                      </li>
+
+                      <li>
+                        <button class="dropdown-item">
+                          <i class="fa-solid fa-gear mx-2 gear_icon"></i>
+                          Settings
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item">
+                          <i
+                            class="fa-solid fa-right-from-bracket mx-2 logout_icon text-danger"
+                          ></i>
+                          Logout
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
               <div class="search_box d-lg-none">
                 <input type="text" placeholder="Search..." class="search_inp" />
                 <i class="fa-solid fa-search"></i>
@@ -77,18 +170,122 @@
               </div>
             </div>
 
-            <div
-              class="box_2 nav_boxes sidebar_icon_box d-flex d-lg-none justify-content-around"
-            >
-              <i class="fa-solid fa-sun sidebar_light_mode_btn"></i>
-              <i class="fa-solid fa-moon sidebar_dark_mode_btn"></i>
-              <i class="fa-solid fa-user"></i>
+            <!-- ===== Another sidebar for icon view only ===== -->
+            <div class="box_1 icon_view_box d-none">
+              <div
+                class="nav_boxes navbar_user_box d-flex align-items-center gap-3 px-3 my-3"
+                style="max-width: min-content"
+              >
+                <img
+                  src="asset/images/user_image.jpg"
+                  alt="User_image"
+                  width="40"
+                  height="40"
+                  class="rounded-circle user_image"
+                />
+                <div class="dropdown">
+                  <p
+                    class="dropdown-toggle m-0"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  ></p>
+                  <div class="dropdown-menu dropdown-menu-dark">
+                    <ul class="user_options_box sidebar_user_options_box">
+                      <li>
+                        <button class="dropdown-item light_mode_btn">
+                          <i class="fa-solid fa-sun mx-2"></i> light
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item dark_mode_btn">
+                          <i class="fa-solid fa-moon mx-2"></i>dark
+                        </button>
+                      </li>
+
+                      <li>
+                        <button class="dropdown-item">
+                          <i class="fa-solid fa-gear mx-2 gear_icon"></i>
+                          Settings
+                        </button>
+                      </li>
+                      <li>
+                        <button class="dropdown-item">
+                          <i
+                            class="fa-solid fa-right-from-bracket mx-2 logout_icon text-danger"
+                          ></i>
+                          Logout
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="search_box d-flex justify-content-center py-2 d-lg-none"
+              >
+                <!-- <input type="text" placeholder="Search..." class="search_inp" /> -->
+                <i class="fa-solid fa-search search_icon"></i>
+              </div>
+
+              <div class="menu_btns_box">
+                <button class="menu_btns active">
+                  <i class="fa-solid fa-desktop"></i>
+                </button>
+                <button class="menu_btns">
+                  <i class="fa-solid fa-table"></i>
+                </button>
+                <button class="menu_btns">
+                  <i class="fa-solid fa-chart-simple"></i>
+                </button>
+                <button class="menu_btns">
+                  <i class="fa-solid fa-user"></i>
+                </button>
+                <button class="menu_btns">
+                  <i class="fa-brands fa-uikit"></i>
+                </button>
+              </div>
             </div>
           </div>
           <!-- ==== Main Contant  ==== -->
           <div class="main_contant">
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit id nisi reiciendis quisquam quaerat impedit saepe, veniam ea sequi, earum maxime facilis. Consequatur voluptatem, debitis sed unde corporis maiores numquam in illo enim eveniet velit ullam voluptatibus, a suscipit et, accusamus hic iure aut voluptates laborum consectetur iste soluta libero! Eaque consequuntur debitis, nulla nemo incidunt corporis hic est voluptas ratione fuga sint in enim vero voluptate. Ducimus repellendus deleniti voluptatem beatae fuga delectus ipsa ea ut earum eaque recusandae itaque numquam exercitationem illo quaerat consequuntur, quas adipisci voluptatum quis neque similique enim! Possimus sapiente dolorum, sed quos maiores quibusdam earum esse nesciunt ipsa numquam inventore soluta incidunt architecto quo doloremque, beatae in? Veniam illum reiciendis ipsa, aspernatur commodi maxime. Laboriosam explicabo veniam assumenda temporibus! Ad et odio illum magnam vel itaque, porro asperiores pariatur laboriosam saepe magni nostrum sit veritatis quos. Unde, eligendi? Dicta architecto praesentium repellat, dolorum rem omnis dolores iste culpa illo ea commodi ipsum autem fugiat nobis, perspiciatis ratione a reprehenderit id facilis iure dolor, recusandae aliquam molestias! In, iste facilis itaque, ea sed neque laboriosam ipsam porro alias dolor quaerat rerum ducimus iure sit eaque dignissimos! Nesciunt rerum omnis aliquam doloribus cum sint, repudiandae harum cumque esse cupiditate delectus excepturi dolore corporis. Rem temporibus impedit excepturi illo nam voluptatum, qui fuga explicabo ipsa sapiente numquam quo deserunt pariatur tenetur voluptas dolore voluptatem, dolorum quos, perferendis voluptatibus. Consequatur sed iusto officia modi consectetur molestias voluptas ex eius quo. Obcaecati accusantium illo officiis cupiditate quis temporibus aut veniam repellat, eum totam repellendus deleniti illum id eos eveniet nisi reprehenderit error, tempora, placeat perferendis dolor delectus! Eligendi dolores fugiat libero sint provident praesentium veritatis aperiam autem minus, quidem ab facilis magni illum sunt deserunt dolorum. Corporis recusandae laborum, repudiandae cupiditate quisquam numquam natus molestiae culpa similique hic debitis.
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit id
+              nisi reiciendis quisquam quaerat impedit saepe, veniam ea sequi,
+              earum maxime facilis. Consequatur voluptatem, debitis sed unde
+              corporis maiores numquam in illo enim eveniet velit ullam
+              voluptatibus, a suscipit et, accusamus hic iure aut voluptates
+              laborum consectetur iste soluta libero! Eaque consequuntur
+              debitis, nulla nemo incidunt corporis hic est voluptas ratione
+              fuga sint in enim vero voluptate. Ducimus repellendus deleniti
+              voluptatem beatae fuga delectus ipsa ea ut earum eaque recusandae
+              itaque numquam exercitationem illo quaerat consequuntur, quas
+              adipisci voluptatum quis neque similique enim! Possimus sapiente
+              dolorum, sed quos maiores quibusdam earum esse nesciunt ipsa
+              numquam inventore soluta incidunt architecto quo doloremque,
+              beatae in? Veniam illum reiciendis ipsa, aspernatur commodi
+              maxime. Laboriosam explicabo veniam assumenda temporibus! Ad et
+              odio illum magnam vel itaque, porro asperiores pariatur laboriosam
+              saepe magni nostrum sit veritatis quos. Unde, eligendi? Dicta
+              architecto praesentium repellat, dolorum rem omnis dolores iste
+              culpa illo ea commodi ipsum autem fugiat nobis, perspiciatis
+              ratione a reprehenderit id facilis iure dolor, recusandae aliquam
+              molestias! In, iste facilis itaque, ea sed neque laboriosam ipsam
+              porro alias dolor quaerat rerum ducimus iure sit eaque
+              dignissimos! Nesciunt rerum omnis aliquam doloribus cum sint,
+              repudiandae harum cumque esse cupiditate delectus excepturi dolore
+              corporis. Rem temporibus impedit excepturi illo nam voluptatum,
+              qui fuga explicabo ipsa sapiente numquam quo deserunt pariatur
+              tenetur voluptas dolore voluptatem, dolorum quos, perferendis
+              voluptatibus. Consequatur sed iusto officia modi consectetur
+              molestias voluptas ex eius quo. Obcaecati accusantium illo
+              officiis cupiditate quis temporibus aut veniam repellat, eum totam
+              repellendus deleniti illum id eos eveniet nisi reprehenderit
+              error, tempora, placeat perferendis dolor delectus! Eligendi
+              dolores fugiat libero sint provident praesentium veritatis aperiam
+              autem minus, quidem ab facilis magni illum sunt deserunt dolorum.
+              Corporis recusandae laborum, repudiandae cupiditate quisquam
             </p>
           </div>
         </div>
