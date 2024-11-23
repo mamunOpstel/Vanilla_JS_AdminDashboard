@@ -191,8 +191,12 @@ p {
       width: min-content;
       max-width: none;
       position: relative;
+      @media (width < 992px) {
+        position: absolute;
+      }
 
       .icon_view_box {
+        max-width: 90px;
         .search_icon {
           text-align: center;
           font-size: 20px;
