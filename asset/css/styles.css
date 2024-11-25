@@ -229,6 +229,17 @@ p {
       .active {
         display: block;
       }
+      #chart_tab {
+        .chart_container {
+          max-width: 800px;
+          height: 600px;
+          max-height: 80vh;
+          margin: 2rem auto;
+          display: flex;
+          flex-direction: column;
+          gap: 200px;
+        }
+      }
     }
   }
 }
