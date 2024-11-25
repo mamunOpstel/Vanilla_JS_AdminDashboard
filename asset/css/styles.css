@@ -217,6 +217,18 @@ p {
       overflow-y: scroll;
       scrollbar-color: var(--text-clr) var(--bg-ternary);
       scrollbar-width: none;
+
+      /* =====> Tabs <===== */
+      .tabs {
+        width: 100%;
+        display: none;
+        h1 {
+          color: var(--text-clr);
+        }
+      }
+      .active {
+        display: block;
+      }
     }
   }
 }

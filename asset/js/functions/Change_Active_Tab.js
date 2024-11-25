@@ -12,6 +12,7 @@ const buttons_list_1 = Array.from(
 const buttons_list_2 = Array.from(
   document.querySelectorAll(".icon_view_box .menu_btns")
 );
+const tabs_list = Array.from(document.querySelectorAll(".main_contant .tabs"));
 
 const changeAvtivebutton = (index) => {
   buttons_list_1.forEach((button) => {
@@ -23,6 +24,15 @@ const changeAvtivebutton = (index) => {
     button.classList.remove("active");
   });
   buttons_list_2[index].classList.add("active");
+  // changing the active tabs
+  if (tabs_list[index]) {
+    tabs_list.forEach((tab) => {
+      tab.classList.remove("active");
+    });
+    tabs_list[index].classList.add("active");
+  } else {
+    console.error("This Tab is not available");
+  }
 };
 
 const getButtonIndex = (event, buttons_list) => {
@@ -40,6 +50,9 @@ const getButtonIndex = (event, buttons_list) => {
     const index = buttons_list.indexOf(button);
 
     changeAvtivebutton(index);
+    // For closing the menu after changing the tab
+    const sidebar = document.querySelector(".side_bar");
+    sidebar.classList.remove("side_bar_active");
   }
 };
 
